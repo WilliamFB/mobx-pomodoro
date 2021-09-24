@@ -3,8 +3,14 @@ import 'package:flutter/material.dart';
 class EntradaTempo extends StatelessWidget {
   final String titulo;
   final int valor;
+  final Function inc;
+  final Function dec;
 
-  EntradaTempo({required this.titulo, required this.valor});
+  EntradaTempo(
+      {required this.titulo,
+      required this.valor,
+      required this.inc,
+      required this.dec});
 
   @override
   Widget build(BuildContext context) {
@@ -14,21 +20,23 @@ class EntradaTempo extends StatelessWidget {
         Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            _buildButton(Icons.arrow_downward),
-            _buildButton(Icons.arrow_upward),
+            _buildButton(Icons.arrow_downward, dec),
             Text(
-              '$valor - min',
+              '$valor min',
               style: TextStyle(fontSize: 18),
             ),
+            _buildButton(Icons.arrow_upward, inc),
           ],
         )
       ],
     );
   }
 
-  Widget _buildButton(IconData icone) {
+  Widget _buildButton(IconData icone, Function function) {
     return ElevatedButton(
-      onPressed: () {},
+      onPressed: () {
+        function();
+      },
       child: Icon(
         icone,
         color: Colors.white,

@@ -11,9 +11,6 @@ class PomodoroPage extends StatelessWidget {
     final store = Provider.of<PomodoroStore>(context);
 
     return Scaffold(
-      appBar: AppBar(
-        title: Text('Pomodoro'),
-      ),
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: [

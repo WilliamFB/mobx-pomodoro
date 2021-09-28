@@ -14,6 +14,7 @@ class MyApp extends StatelessWidget {
     return MultiProvider(
       providers: [Provider<PomodoroStore>(create: (_) => PomodoroStore())],
       child: MaterialApp(
+        debugShowCheckedModeBanner: false,
         title: 'Pomodoro',
         theme: ThemeData(
           primarySwatch: Colors.blue,

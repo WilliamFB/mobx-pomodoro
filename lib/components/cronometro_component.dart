@@ -11,22 +11,24 @@ class Cronometro extends StatelessWidget {
   Widget build(BuildContext context) {
     final store = Provider.of<PomodoroStore>(context);
 
-    return Container(
-        color: Colors.red,
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.center,
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Text(
-              'Texto',
-              style: TextStyle(fontSize: 40, color: Colors.white),
-            ),
-            Text(
-              '${store.minutos.toString().padLeft(2, '0')}:${store.segundos.toString().padLeft(2, '0')}',
-              style: TextStyle(fontSize: 80, color: Colors.white),
-            ),
-            Observer(
-              builder: (_) => Row(
+    return Observer(
+      builder: (_) => Container(
+          color: store.estaTrabalhando() ? Colors.red : Colors.green,
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.center,
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Text(
+                store.estaTrabalhando()
+                    ? 'Hora de trabalhar'
+                    : 'Hora de descansar',
+                style: TextStyle(fontSize: 40, color: Colors.white),
+              ),
+              Text(
+                '${store.minutos.toString().padLeft(2, '0')}:${store.segundos.toString().padLeft(2, '0')}',
+                style: TextStyle(fontSize: 80, color: Colors.white),
+              ),
+              Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   store.iniciado
@@ -45,8 +47,8 @@ class Cronometro extends StatelessWidget {
                       function: store.reiniciar),
                 ],
               ),
-            )
-          ],
-        ));
+            ],
+          )),
+    );
   }
 }

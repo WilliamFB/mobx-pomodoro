@@ -33,7 +33,7 @@ abstract class _PomodoroStore with Store {
   void iniciar() {
     iniciado = true;
 
-    cronometro = Timer.periodic(Duration(milliseconds: 50), (timer) {
+    cronometro = Timer.periodic(Duration(seconds: 1), (timer) {
       if (minutos == 0 && segundos == 0) {
         inverterIntervalo();
       } else if (segundos == 0) {

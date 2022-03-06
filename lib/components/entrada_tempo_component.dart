@@ -17,8 +17,6 @@ class EntradaTempo extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final store = Provider.of<PomodoroStore>(context);
-
     return Observer(
       builder: (_) => Column(
         children: [

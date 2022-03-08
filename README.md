@@ -1,6 +1,6 @@
 <h1 align="center">MobX Pomodoro</h1>
 
-<p align="center">Esse projeto é de um temporizador Pomodoro, desenvolvido em Flutter utilizando a biblioteca de gerência de estado MobX.</p>
+<p align="center">Esse projeto é um temporizador Pomodoro. Foi desenvolvido em Flutter utilizando a biblioteca de gerência de estado MobX.</p>
 
 <p align="center">
  <a href="#rodando-a-aplicação">Rodando a aplicação</a> •
@@ -11,8 +11,8 @@
 ---
 <br>
 <h1 align="center">
-  <img alt="WeatherApp" title="WeatherApp" src="./github/trabalho.gif" height="354" />
-  <img alt="WeatherApp" title="Persistência do tema e alerta de erro de cidade não encontrada" src="./github/descanso.gif" height="354" />
+  <img alt="Trabalho" title="Trabalho" src="./github/trabalho.gif" height="354" />
+  <img alt="Descanso" title="Descanso" src="./github/descanso.gif" height="354" />
 </h1>
 
 ### Rodando a aplicação
@@ -43,5 +43,3 @@ O build_runner percorre todo o projeto em busca de arquivos .dart para gerar seu
 - [Provider](https://pub.dev/packages/provider)
 - [MobX Codegen](https://pub.dev/packages/mobx_codegen)
 - [Build Runner](https://pub.dev/packages/build_runner)
-- [Provider](https://pub.dev/packages/provider)
-- [Provider](https://pub.dev/packages/provider)
